@@ -16,6 +16,7 @@ class CreateWpIslandsTable extends Migration
         Schema::create('wp_islands', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique();
+            $table->string('en_name');
             $table->timestamps();
         });
     }
